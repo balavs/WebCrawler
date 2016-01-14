@@ -277,9 +277,9 @@ func main() {
 	//appurl - channel for communicating the URL/depth to statThread
 	//updurl - channel for communicating the URL log info to statThread
 	//crwldone - channel for communicating that all links have ben crawled to the main() from statThread
-	crwlurl   := make(chan UrlInfo)
-	appurl    := make(chan UrlInfo)
-	updurl    := make(chan LogInfo)
+	crwlurl   := make(chan UrlInfo,numThreads)
+	appurl    := make(chan UrlInfo,numThreads)
+	updurl    := make(chan LogInfo,numThreads)
 	crwldone  := make(chan bool)
 
         // Spawn the stats collection thread
