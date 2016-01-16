@@ -10,7 +10,7 @@ import (
 
 //Configuration constants
 const numThreads int = 2 //Determines the number of concurrent crawlers
-const crawlDepth int = 1 //Sets the crawl depth 
+const crawlDepth int = 3 //Sets the crawl depth 
 const crawlDelay time.Duration = 1000 //Time delay for crawlThread to move on to next link.
 				      //In units of milliseconds.
 func main() {
