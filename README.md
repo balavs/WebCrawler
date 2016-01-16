@@ -11,6 +11,11 @@ More info can be found in the design document.
 
 #Dependencies:
 Installation of GoLang and Go environment setup is a pre-requisite.
+
+To get the source code, please execute the following git command or you get the zip file for the source from the below URL and install manually in the GOPATH/src dir:
+
+git clone https://github.com/balavs/WebCrawler.git
+
 Installation of the following external go libraries is required:
 
 go get github.com/andybalholm/cascadia
