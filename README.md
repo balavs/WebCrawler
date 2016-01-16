@@ -4,7 +4,9 @@ GoLang implementation of WebCrawler.This webcrawler will take a "seed url" from 
 There are 3 configurable parameters in webcrawler.go that can be changed to configure the webcrawler:
 
 const numThreads int = 2 //Determines the number of concurrent crawlers. Default is set to 2 but can be increased depending on the resource available.
+
 const crawlDepth int = 3 //Sets the crawl depth. This is set to 3 based on the requirement but can be changed if required. 
+
 const crawlDelay time.Duration = 1000 //Time delay for crawlThread to move on to next link in units of milliseconds. Default is 1 second and can be changed as required.
 
 More info can be found in the design document.
