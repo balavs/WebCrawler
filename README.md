@@ -19,6 +19,6 @@ go install
 
 This will create the binary WebCrawler(unix)/WebCrawler.exe(Windows) in $GOBIN/%GOBIN% dir. The binary can be executed as follows:
 
-Unix    : $GOBIN/WebCrawler\ <http://full.url.path\>
+Unix    : $GOBIN/WebCrawler \<http://full.url.path\>
 Windows : %GOBIN%/WebCrawler.exe \<http://full.url.path\>
 
