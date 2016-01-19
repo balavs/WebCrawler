@@ -118,9 +118,16 @@ func statThread(crwlurl chan<- UrlInfo, appurl <-chan UrlInfo,
 			//If there is new URL available send the URL on crwlurl 
 			//channel, remove the url from crawlListMap and add it to crawlStatMap  
 	                if (crawlPend) {
-			  pendCrawlCnt = mvUrlMaps(crawlUrl,pendCrawlCnt,crawlStatMap,crawlListMap)
-	                  crwlurl <- crawlUrl
+			  select {
+				case crwlurl <- crawlUrl:
+					pendCrawlCnt = mvUrlMaps(crawlUrl,pendCrawlCnt,crawlStatMap,crawlListMap)
+					//fmt.Printf("UPD:-%d\n",pendCrawlCnt)
+				default :
+					//Do nothing. Just to make the select non-blocking
+			  }
 			}
+		 default :
+				//Do nothing. Just to make the select non-blocking
 		}
 	      }
 }
