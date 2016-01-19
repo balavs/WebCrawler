@@ -40,7 +40,7 @@ func main() {
 	//crwldone - channel for communicating that all links have been 
 	//           crawled to the main() from statThread
 	crwlurl   := make(chan UrlInfo,numThreads)
-	appurl    := make(chan UrlInfo,numThreads)
+	appurl    := make(chan UrlInfo)
 	updurl    := make(chan LogInfo,numThreads)
 	crwldone  := make(chan bool)
 
