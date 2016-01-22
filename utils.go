@@ -259,6 +259,7 @@ func getUrlLinks(geturli UrlInfo, appurl chan<- UrlInfo, updurl chan<- LogInfo) 
 	//response code and continue parsing the page contents
 	  urlLog.RespCode = resp.Status
 	}
+	defer resp.Body.Close()
 
 	//Only if the current URL depth is less than the crawlDepth config value,
 	//parse the page to get the links.
